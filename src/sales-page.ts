@@ -129,15 +129,15 @@ export function initSalesPage(): void {
         <h2>¿Preguntas? Contáctanos</h2>
         <form class="contact-form" id="contactForm">
           <div class="form-group">
-            <input type="text" placeholder="Tu nombre" required />
+            <input type="text" name="name" placeholder="Tu nombre" required />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Tu email" required />
+            <input type="email" name="email" placeholder="Tu email" required />
           </div>
           <div class="form-group">
-            <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+            <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
           </div>
-          <button type="submit" class="submit-btn">Enviar Consulta</button>
+          <button type="submit" class="submit-btn">Enviar por WhatsApp</button>
         </form>
       </section>
 
@@ -206,7 +206,9 @@ function setupEventListeners(): void {
   const contactForm = document.querySelector('#contactForm') as HTMLFormElement;
   contactForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+    const data = new FormData(contactForm);
+    const message = `Hola JohnTrucks, soy ${data.get('name')} (${data.get('email')}).\n\n${data.get('message')}`;
+    window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
     contactForm.reset();
   });
 
