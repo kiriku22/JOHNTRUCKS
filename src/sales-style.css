@@ -19,6 +19,10 @@ body {
   flex-direction: column;
 }
 
+main {
+  flex: 1;
+}
+
 /* HEADER */
 .header {
   background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #3d3d3d 100%);
@@ -59,8 +63,9 @@ body {
   flex-direction: column;
 }
 
-.logo-section h1 {
+.logo-section .logo {
   font-size: 1.8rem;
+  font-weight: 700;
   margin-bottom: 0.25rem;
   color: #D4AF37;
   text-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
@@ -144,7 +149,7 @@ body {
   z-index: 1;
 }
 
-.hero-content h2 {
+.hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -172,6 +177,48 @@ body {
   background: linear-gradient(135deg, #E8E8E8 0%, #D4AF37 50%, #E8E8E8 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+
+/* SERVICES SECTION */
+.services-section {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.services-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #D4AF37;
+  text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  border: 1px solid #D4AF37;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #D4AF37;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
 }
 
 /* PRODUCTS SECTION */
@@ -229,6 +276,14 @@ body {
   margin-bottom: 3rem;
 }
 
+.category-group {
+  display: contents;
+}
+
+.category-group[hidden] {
+  display: none;
+}
+
 .category-heading {
   grid-column: 1 / -1;
   font-size: 1.5rem;
@@ -275,7 +330,7 @@ body {
   object-fit: contain;
 }
 
-.product-card h3 {
+.product-card h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #D4AF37;
@@ -366,6 +421,19 @@ body {
   margin-bottom: 2rem;
   color: #D4AF37;
   text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+.contact-info {
+  font-style: normal;
+  text-align: center;
+  color: #E8E8E8;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: #D4AF37;
+  font-weight: 700;
 }
 
 .contact-form {
@@ -584,7 +652,7 @@ body {
     gap: 1rem;
   }
 
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 1.8rem;
   }
 
