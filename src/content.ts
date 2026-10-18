@@ -119,7 +119,7 @@ export function renderPage(): string {
           <div class="logo-section">
             <img src="/logo-300.webp" alt="Logo JohnTrucks Sistemas de Carpado" width="135" height="90" class="logo-img" />
             <div class="logo-text">
-              <p class="logo">JohnTrucks</p>
+              <p class="logo"><span class="logo-john">John</span><span class="logo-trucks">Trucks</span></p>
               <p class="tagline">Sistemas de carpado y accesorios para vehículos de carga</p>
             </div>
           </div>
