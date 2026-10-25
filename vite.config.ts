@@ -9,7 +9,7 @@ function staticContent(): Plugin {
   }
 }
 
-// GitHub Pages publica el sitio en https://www.johntrucks.com/ (dominio propio, ver public/CNAME)
+// GitHub Pages publica el sitio en https://www.johntrucks.online/ (dominio propio, ver public/CNAME)
 export default defineConfig({
   base: '/',
   plugins: [staticContent()],
